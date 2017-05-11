@@ -1,12 +1,25 @@
 %nav.navbar.navbar-default
   .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"type" =>"button", "data-toggle"=>"collapse",
+                                    "data-target"=>"#bs-example-navbar-collapse-1", "aria-expanded"=>"false"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
     .navbar-brand= link_to "Hello Junior", root_path
-
-    - if user_signed_in?
-      %ul.nav.navbar-nav.navbar-right
-        %li= link_to "Account", edit_user_registration_path
-        %li= link_to "Sign Out", destroy_user_session_path, method: :delete
-    - else
-      %ul.nav.navbar-nav.navbar-right
-        %li= link_to "Sign Up", new_user_registration_path
-        %li= link_to "Sign In", new_user_session_path
+    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+      %ul.nav.navbar-nav.navbar-left
+        %li= link_to 'All Jobs', root_path
+        %li= link_to 'Post a Job', root_path
+        %li= link_to 'Insights', root_path
+        %li= link_to 'Companies', root_path
+        %li= link_to 'Articles', root_path
+      - if user_signed_in?
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Account", edit_user_registration_path
+          %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+      - else
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Sign Up", new_user_registration_path
+          %li= link_to "Sign In", new_user_session_path
