@@ -23,6 +23,5 @@ module Hellojunior
     # -- all .rb files in that directory are automatically loaded.
 
     config.time_zone = "London"
-    config.active_record.default_timezone = :local
   end
 end
