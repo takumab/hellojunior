@@ -16,5 +16,21 @@
 
   h1 {
     color: #fff;
+    text-align: center;
   }
+  .container {
+    position: relative;
+
+    #search-form{
+      position: relative;
+      left: 50%;
+      margin-left: -300px;
+      .form-control {
+        display: inline-block;
+        width: 85%;
+        margin-right: 0;
+      }
+    }
+  }
+
 }

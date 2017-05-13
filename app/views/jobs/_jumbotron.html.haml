@@ -1,3 +1,8 @@
 .jumbotron
   .container
     %h1 HelloJunior
+    %div.col-xs-12.col-sm-6#search-form
+      =form_tag("/search", method: "get") do
+        = text_field_tag(:q, "", class: "form-control", placeholder: "Search...")
+        = button_tag(type: "submit", class: "btn btn-primary") do
+          %i.glyphicon.glyphicon-search
